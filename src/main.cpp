@@ -1621,7 +1621,13 @@ int64_t GetBlockValue(int nHeight)
     } else if (nHeight <= 200 && nHeight > 0) {
         nSubsidy = 1 * COIN;        // Startup
     } else if (nHeight <= 525600 && nHeight > 200) {
-        nSubsidy = 50 * COIN;       // Year 1
+        // Year 1
+        if(IsSporkActive(SPORK_15_BLOCK_VALUE_ENFORCEMENT)) {
+            nSubsidy = 40 * COIN;
+        }
+        else {
+            nSubsidy = 50 * COIN;
+        }
     } else if (nHeight <= 1051200 && nHeight > 525600) {
         nSubsidy = 30 * COIN;       // Year 2
     } else if (nHeight <= 1576800 && nHeight > 1051200) {
@@ -1663,7 +1669,12 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
     if (nHeight <= 200) {
         ret = 0;
     } else {
-		ret = blockValue * 0.8;
+        if(IsSporkActive(SPORK_15_BLOCK_VALUE_ENFORCEMENT)) {
+            ret = blockValue * 0.9;
+        }
+        else {
+            ret = blockValue * 0.8;
+        }
 	}
 
     return ret;
