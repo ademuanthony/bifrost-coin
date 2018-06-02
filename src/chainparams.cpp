@@ -189,7 +189,7 @@ public:
         vSeeds.push_back(CDNSSeedData("", ""));
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 112);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 29);
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 240);
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 239);
         // Testnet bifrost BIP32 pubkeys start with 'DRKV'
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x3a)(0x80)(0x61)(0xa0).convert_to_container<std::vector<unsigned char> >();
         // Testnet bifrost BIP32 prvkeys start with 'DRKP'
