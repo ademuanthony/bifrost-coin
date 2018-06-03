@@ -12,7 +12,7 @@ Bifrost Core Repository
 
 ### Links
 * Official Website(http://bifrostcoin.io/)
-* Official Discord(https://discord.gg/zQMrU3s)
+* Official Discord(https://discord.gg/uMHKEm2)
 * Bifrost Twitter(https://twitter.com/BifrostCoin)
 
 ### Overview
